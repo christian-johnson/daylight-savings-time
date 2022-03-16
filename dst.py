@@ -110,7 +110,7 @@ def dst_matrices(city, year = '2022'):
 def month_lines(ax, year):
     month_idx = []
     for i,month in enumerate(month_names):
-        ax.axhline(date(year, i+1, 1).timetuple().tm_yday, ls = '--', c = 'k', lw = 1.)
+        ax.axhline(date(year, i+1, 1).timetuple().tm_yday - 1, ls = '--', c = 'k', lw = 1.)
     return
 
 def plot_dst(city, hgrid = True, year = '2022'):
